@@ -1,23 +1,43 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'uninstall',
+1 verbose cli   '-g',
+1 verbose cli   'webpack-dev-server' ]
 2 info using npm@2.15.8
 3 info using node@v4.4.7
-4 verbose stack Error: missing script: start
-4 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:142:19)
-4 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:58:5
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
-4 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
-4 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
-4 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:243:12
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
-4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
-5 verbose cwd /Users/mac/Desktop/React/react-js-tutorials/1-basic-react
-6 error Darwin 14.0.0
-7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
-8 error node v4.4.7
-9 error npm  v2.15.8
-10 error missing script: start
-11 error If you need help, you may report this error at:
-11 error     <https://github.com/npm/npm/issues>
-12 verbose exit [ 1, true ]
+4 verbose unbuild lib/node_modules/webpack-dev-server
+5 info preuninstall webpack-dev-server@1.16.2
+6 info uninstall webpack-dev-server@1.16.2
+7 verbose unbuild rmStuff webpack-dev-server@1.16.2 from /usr/local/lib/node_modules
+8 silly gentlyRm /usr/local/bin/webpack-dev-server is being gently removed
+9 silly gentlyRm verifying /usr/local is an npm working directory
+10 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+11 silly gentlyRm deletion target /usr/local/bin/webpack-dev-server is under /usr/local
+12 verbose gentlyRm vacuuming from /usr/local/bin/webpack-dev-server up to /usr/local
+13 silly vacuum-fs removing /usr/local/bin/webpack-dev-server
+14 silly vacuum-fs quitting because other entries in /usr/local/bin
+15 info postuninstall webpack-dev-server@1.16.2
+16 silly gentlyRm /usr/local/lib/node_modules/webpack-dev-server is being purged from base /usr/local
+17 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/webpack-dev-server
+18 silly vacuum-fs purging /usr/local/lib/node_modules/webpack-dev-server
+19 verbose stack Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/webpack-dev-server'
+19 verbose stack     at Error (native)
+20 verbose cwd /Users/mac/Desktop/React/react-js-tutorials/1-basic-react
+21 error Darwin 14.0.0
+22 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "uninstall" "-g" "webpack-dev-server"
+23 error node v4.4.7
+24 error npm  v2.15.8
+25 error path /usr/local/lib/node_modules/webpack-dev-server
+26 error code EACCES
+27 error errno -13
+28 error syscall rmdir
+29 error Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/webpack-dev-server'
+29 error     at Error (native)
+29 error  { [Error: EACCES: permission denied, rmdir '/usr/local/lib/node_modules/webpack-dev-server']
+29 error   errno: -13,
+29 error   code: 'EACCES',
+29 error   syscall: 'rmdir',
+29 error   path: '/usr/local/lib/node_modules/webpack-dev-server' }
+30 error Please try running this command again as root/Administrator.
+31 verbose exit [ -13, true ]
